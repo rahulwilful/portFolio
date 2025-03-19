@@ -1,0 +1,20 @@
+@media (max-width: 576px) {
+}
+
+@media (min-width: 577px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .experience1 {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}

@@ -1,0 +1,58 @@
+.opacity {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+@media (max-width: 576px) {
+}
+
+@media (min-width: 577px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .experience1 {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+
+/* 
+  const scrollRef = useRef(null);
+
+  const config = { threshold: 0.1 };
+
+  let observer = new IntersectionObserver(function (entries, self) {
+    let targets = entries.map(entry => {
+      if (entry.isIntersecting) {
+        self.unobserve(entry.target);
+        return entry.target;
+      }
+    });
+
+    // Call our animation function
+    fadeIn(targets);
+  }, config);
+
+  document.querySelectorAll('.card').forEach(card => {
+    observer.observe(card);
+  });
+
+  function fadeIn(targets) {
+    console.log('fadeIn called');
+    gsap.to(targets, {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+      stagger: 0.2,
+      ease: 'power1.out'
+    });
+  }
+*/

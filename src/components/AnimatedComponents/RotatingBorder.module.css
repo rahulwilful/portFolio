@@ -1,0 +1,47 @@
+.box {
+  position: relative; /* Establishes a stacking context */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  overflow: hidden;
+  padding: 1px;
+  border-radius: 7px;
+}
+
+.blue::before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 200%;
+  filter: blur(12px);
+  background-image: conic-gradient(rgb(238, 56, 255) 20deg, transparent 120deg);
+  animation: animate 10s linear infinite;
+  z-index: 0; /* Ensure this is lower than the children */
+  pointer-events: none;
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background-color: transparent;
+  border-radius: 5px;
+  z-index: 1; /* Ensure this is lower than the children */
+  pointer-events: none;
+}
+
+.card {
+  position: relative;
+  z-index: 2; /* Ensure this is higher than the pseudo-elements */
+  pointer-events: auto;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

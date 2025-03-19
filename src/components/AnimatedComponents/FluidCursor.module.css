@@ -1,0 +1,35 @@
+.cursor_dot {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+.cursor_follower {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+/* Optional: Hide default cursor */
+body {
+  cursor: none;
+}
+
+/* Optional: Hover effects */
+a:hover ~ .cursor_follower,
+button:hover ~ .cursor_follower {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.3);
+}
