@@ -1,9 +1,18 @@
+.opacity {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.experience1 {
+  max-width: 800px;
+}
+
 @media (max-width: 576px) {
 }
 
 @media (min-width: 577px) {
   .experience1 {
-    width: 80%;
+    width: 99%;
   }
 }
 
@@ -12,7 +21,7 @@
 
 @media (min-width: 992px) {
   .experience1 {
-    width: 40%;
+    width: 80%;
   }
 }
 

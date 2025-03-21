@@ -1,9 +1,18 @@
+.opacity {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+.card {
+  max-width: 900px;
+}
+
 @media (max-width: 576px) {
 }
 
 @media (min-width: 577px) {
-  .experience1 {
-    width: 80%;
+  .card {
+    min-height: 55vh;
   }
 }
 
@@ -11,8 +20,8 @@
 }
 
 @media (min-width: 992px) {
-  .experience1 {
-    width: 40%;
+  .card {
+    min-height: 55vh;
   }
 }
 

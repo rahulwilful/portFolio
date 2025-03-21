@@ -1,0 +1,1 @@
+export const SkillsInformation = ['HTML', 'CSS', 'JavaScript', 'React', 'React Native', 'Node.js', 'Express.js', 'MongoDB', 'SQL', 'Bootstrap', 'GitHub', 'VS Code', 'Netlify', 'GSAP', 'Postman', 'AWS S3', 'AWS Amplify'];

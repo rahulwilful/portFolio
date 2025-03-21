@@ -42,7 +42,7 @@ const Introduction = () => {
 
     gsap.fromTo(
       '.name',
-      { opacity: 0, y: 50 },
+      { opacity: 0, y: 10 },
       {
         delay: navBarDelay + 1,
         opacity: 1,
@@ -60,8 +60,27 @@ const Introduction = () => {
     );
 
     gsap.fromTo(
+      '.positionTitle',
+      { opacity: 0, y: 10 },
+      {
+        delay: navBarDelay + 1.5,
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power1.out',
+        scrollTrigger: {
+          trigger: '.image',
+          start: 'top 100%',
+          end: 'top 0%',
+          //markers: true,
+          toggleActions: 'play none none reverse'
+        }
+      }
+    );
+
+    gsap.fromTo(
       '.introduction',
-      { opacity: 0, y: 50 },
+      { opacity: 0, y: 10 },
       {
         delay: navBarDelay + 2,
         opacity: 1,
@@ -70,7 +89,7 @@ const Introduction = () => {
         ease: 'power1.out',
         scrollTrigger: {
           trigger: '.image',
-          start: 'top 97%',
+          start: 'top 100%',
           end: 'top 0%',
           //markers: true,
           toggleActions: 'play none none reverse'
@@ -89,7 +108,7 @@ const Introduction = () => {
         ease: 'power1.out',
         scrollTrigger: {
           trigger: '.image',
-          start: 'top 97%',
+          start: 'top 100%',
           end: 'top 0%',
           //markers: true,
           toggleActions: 'play none none reverse'
@@ -101,22 +120,25 @@ const Introduction = () => {
   return (
     <>
       <Container tempBorder={false}>
-        <div className={`d-flex  w-100 h-100 align-items-center overflow-hidden`}>
+        <div className={`d-flex flex-column-reverse flex-lg-row  gap-4  w-100 h-100 align-items-center justify-content-evenly overflow-hidden`}>
           <SplashCursor Position={'absolute'} />
           {/*  */}
-          <div className={` ${s.intro} introductionContainer py-5 border shadow-s border-dark d-flex flex-column justify-content-center align-items-center px-5`}>
+          <div className={` ${s.intro} introductionContainer py-3 py-md-5 border shadow-s border-dark d-flex flex-column justify-content-center align-items-center px-3  px-md-4`}>
             <h1 className="gemeStonesRegular name">Rahul Patil</h1>
 
-            <div className={``}>
-              <p style={{ textAlign: 'justify' }} className="delius-regular introduction">
+            <div className={`d-flex flex-column gap-3`}>
+              <div>
+                <h4 className="winkySans600 subText positionTitle text-center"> Full Stack Web And App Developer</h4>
+              </div>
+              <p style={{ textAlign: 'justify' }} className="delius-regular deliusRegular introduction">
                 As a skilled full-stack developer passionate about software development, I have 18 months of experience with Vue, React, Node, Express, MongoDB, and SQL. Additionally, I have 4 months of hands-on experience with React Native for full-stack app development. With a strong foundation in software development principles, I am highly motivated and eager to learn. Seeking opportunities to apply my skills to real-world problems and grow both personally and professionally, I am committed to excellence. Eager to connect with experienced professionals, I am ready to bring your ideas to life as a dedicated software developer.
               </p>
             </div>
           </div>
-          <div className={`image  d-flex justify-content-center align-items-center ${s.image}`}>
-            <RotatingBorder>
+          <div className={`image   d-flex justify-content-center align-items-center ${s.image}`}>
+            <RotatingBorder tempBorder={false}>
               <div className={` image rounded overflow-hidden  `}>
-                <img src={profileImage2} alt="" style={{ height: 400 }} className={` objectFitContain`} />
+                <img src={profileImage2} alt="" className={` h-100 w-100 objectFitContain`} />
               </div>{' '}
             </RotatingBorder>
           </div>

@@ -6,6 +6,7 @@ import { useGSAP } from '@gsap/react';
 import SplashCursor from './AnimatedComponents/SplashCursor';
 import { globalDuration } from '../constants/animationDelays';
 import StarBorder from './AnimatedComponents/StarBorder';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   useGSAP(() => {
@@ -30,7 +31,7 @@ const NavBar = () => {
   }, []);
   return (
     <>
-      <nav className={`navbar navbar-expand-lg  bg-transparent  `}>
+      <nav className={`navbar navbar-expand-lg  bg-transparent   `}>
         <div className={`container-fluid bg-transparent  w70`}>
           {/*  <SplashCursor Position={'fixed'} /> */}
           <StarBorder as="container" className="w-100" color="red" speed="5s">
@@ -41,24 +42,24 @@ const NavBar = () => {
               <div className={`collapse  navbar-collapse deliusRegular rounded-5`} id="navbarSupportedContent">
                 <ul className={`navbar-nav me-auto mb-2 text-light  mb-lg-0  w-100 dFlex center gap-5  rounded-5`}>
                   <li className={`nav-item`}>
-                    <a className={`navbar-brand text-light`} href="#">
+                    <Link to="/" className={`text-decoration-none text-light`}>
                       Introduction
-                    </a>
+                    </Link>
                   </li>
                   <li className={`nav-item`}>
-                    <a className={`nav-link active  text-light`} aria-current="page" href="#">
+                    <Link to="/experience" className={`nav-link text-decoration-none active  text-light`} aria-current="page">
                       Experience
-                    </a>
+                    </Link>
                   </li>
                   <li className={`nav-item`}>
-                    <a className={`nav-link active text-light`} aria-current="page" href="#">
+                    <Link to="/skills" className={`nav-link text-decoration-none active text-light`} aria-current="page">
                       Skills
-                    </a>
+                    </Link>
                   </li>
                   <li className={`nav-item`}>
-                    <a className={`nav-link active text-light`} aria-current="page" href="#">
+                    <Link to="/projects" className={`nav-link text-decoration-none active text-light`} aria-current="page">
                       Projects
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -66,6 +67,47 @@ const NavBar = () => {
           </StarBorder>
         </div>
       </nav>
+
+      {/*  <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+        Link with href
+      </a>
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+        Button with data-bs-target
+      </button>
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+            Offcanvas
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.</div>
+          <div class="dropdown mt-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#">
+                  Action
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  Another action
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  Something else here
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div> */}
     </>
   );
 };

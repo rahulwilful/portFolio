@@ -1,7 +1,20 @@
-/* .opacity {
+.opacity {
   opacity: 0;
   transform: translateY(50px);
-} */
+}
+
+.backgroundImage {
+  background-image: url('./src/assets/images/backgroundImage.png');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+p {
+  margin-top: 1px;
+}
+
 .shadow-s {
   box-shadow: 0 6px 18px rgba(46, 42, 46, 0.9); /* Horizontal offset, Vertical offset, Blur radius, Color */
 }
@@ -16,9 +29,82 @@
   border-radius: 10px;
 }
 
+.glass2 {
+  background: rgba(63, 63, 63, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+.textLight {
+  color: #fff;
+}
+
+.subText {
+  color: #c0c0c0;
+}
+
+.subText2 {
+  color: #9f9f9f;
+}
+
+.textDark {
+  color: #000;
+}
+
+.textRed {
+  color: #ff0000;
+}
+
+.textGreen {
+  color: #00ff00;
+}
+
+.textBlue {
+  color: #0000ff;
+}
+
+.textYellow {
+  color: #ffff00;
+}
+
+.textOrange {
+  color: #ff8000;
+}
+
+.textPurple {
+  color: #8000ff;
+}
+
+.textPink {
+  color: #ff00ff;
+}
+
+.textCyan {
+  color: #00ffff;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.textJustify {
+  text-align: justify;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.textLeft {
+  text-align: left;
+}
+
 .dFlex {
   display: flex;
 }
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .tempBorder {
   border: 2px solid red;
@@ -39,6 +125,8 @@
 .tempBorder52 {
   border: 2px solid rgb(255, 0, 251);
 }
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .center {
   justify-content: center;
