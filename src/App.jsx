@@ -7,13 +7,14 @@ import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Introduction from './pages/Introduction';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { backgroundImage } from './constants/imagesAndIcons';
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <BrowserRouter>
-      <div className="bg-light min-vh-100 lato-regular position-relative backgroundImage">
+      <div className="bg-light min-vh-100 lato-regular position-relative " style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat' }}>
         <div className={`  w-100 bg-transparent`}>
           <NavBar />
         </div>
