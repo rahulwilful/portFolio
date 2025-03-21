@@ -14,7 +14,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="bg-light min-vh-100 lato-regular position-relative " style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat' }}>
+      <div className="bg-light min-vh-100 lato-regular position-relative " style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'bottom', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }}>
         <div className={`  w-100 bg-transparent`}>
           <NavBar />
         </div>
