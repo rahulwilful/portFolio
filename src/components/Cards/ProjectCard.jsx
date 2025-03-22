@@ -4,6 +4,7 @@ import s from './ProjectCard.module.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import { animateElements } from '../../constants/constantFunctions/OnScrollAnimate';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,13 +12,13 @@ const ProjectCard = ({ title, from, to, details, organisation, skills }) => {
   console.log('skills', skills);
 
   const NA = 'NA';
-  const animateHeading = card => {
+  const animateHeading = (card, delay) => {
     gsap.fromTo(
       card,
       { opacity: 0, y: 10 },
       {
         opacity: 1,
-        delay: 1,
+        delay: delay || 1,
         y: 0,
         duration: 1,
         scrollTrigger: {
@@ -35,48 +36,22 @@ const ProjectCard = ({ title, from, to, details, organisation, skills }) => {
     // Select all elements with the class 'card'
     const headings = document.querySelectorAll('.heading');
 
+    const subText = document.querySelectorAll('.subText');
+
+    const subText2 = document.querySelectorAll('.subText2');
+
     // Loop through each card and apply the animation
     headings.forEach((heading, index) => {
       animateHeading(heading);
     });
-  }, []);
 
-  useEffect(() => {
-    gsap.fromTo(
-      '.subText',
-      { opacity: 0, y: 10 },
-      {
-        opacity: 1,
-        delay: 1.4,
-        y: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: '.subText',
-          start: 'top 97%',
-          end: 'top 0%',
-          //markers: true,
-          toggleActions: 'play none none reverse'
-        }
-      }
-    );
+    subText.forEach((heading, index) => {
+      animateHeading(heading, 1.3);
+    });
 
-    gsap.fromTo(
-      '.subText2',
-      { opacity: 0, y: 10 },
-      {
-        opacity: 1,
-        delay: 1.8,
-        y: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: '.subText2',
-          start: 'top 97%',
-          end: 'top 0%',
-          //markers: true,
-          toggleActions: 'play none none reverse'
-        }
-      }
-    );
+    subText2.forEach((heading, index) => {
+      animateHeading(heading, 1.6);
+    });
   }, []);
 
   const config = { threshold: 0.1 };
@@ -150,7 +125,7 @@ const ProjectCard = ({ title, from, to, details, organisation, skills }) => {
                 <i class="bi bi-building"></i> {organisation || NA}
               </h5>
               <h6 className={`  deliusRegular    subText2`}>
-                <i class="bi bi-calendar3"></i> {from || NA} - {to || NA}
+                <i class="bi bi-calendar3 "></i> {from || NA} - {to || NA}
               </h6>
             </div>
           </div>
@@ -172,7 +147,7 @@ const ProjectCard = ({ title, from, to, details, organisation, skills }) => {
                   {skills
                     ? skills.map((skill, index) => (
                         <li className={` mx-1 my-1 fs-6 px-2 py-1 skill ${s.opacity}`} key={index}>
-                          <button type="button" class="btn btn-sm  btn-outline-light  rounded-pill">
+                          <button type="button" class="btn btn-sm   btn-outline-light  rounded-pill">
                             {skill}
                           </button>
                         </li>
