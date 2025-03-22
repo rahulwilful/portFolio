@@ -41,7 +41,7 @@ const ProjectCard = ({ title, from, to, details, organisation, skills }) => {
     });
   }, []);
 
-  useGSAP(() => {
+  useEffect(() => {
     gsap.fromTo(
       '.subText',
       { opacity: 0, y: 10 },
@@ -142,13 +142,15 @@ const ProjectCard = ({ title, from, to, details, organisation, skills }) => {
   return (
     <>
       <div className={`min-vh-100  d-flex flex-column justify-content-center align-items-center`}>
-        <div className={`  glass2 shadow-s mb-4  border border-dark border-opacity-50 px-3 px-md-4  overflow-y-auto  py-4 gap-3 d-flex flex-column justify-content-start align-items-center `}>
+        <div className={`  glass2  mb-4  border border-dark border-opacity-50 px-3 px-md-4  overflow-y-auto  py-4 gap-3 d-flex flex-column justify-content-start align-items-center `}>
           <div className={` border-bottom border-secondary w100 text-center`}>
             <h2 className="winkySans600 heading"> {title || 'No Title'}</h2>
             <div className={`w-100 d-flex flex-column flex-md-row align-items-md-end justify-content-center gap-md-4 gap-lg-5`}>
-              <h5 className={` deliusRegular     subText`}>{organisation || NA}</h5>
+              <h5 className={` deliusRegular     subText`}>
+                <i class="bi bi-building"></i> {organisation || NA}
+              </h5>
               <h6 className={`  deliusRegular    subText2`}>
-                {from || NA} - {to || NA}
+                <i class="bi bi-calendar3"></i> {from || NA} - {to || NA}
               </h6>
             </div>
           </div>

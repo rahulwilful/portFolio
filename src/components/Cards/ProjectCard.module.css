@@ -1,7 +1,7 @@
 .opacity {
-    opacity: 0;
-    transform: translateY(50px);
-  }
+  opacity: 0;
+  transform: translateY(10px);
+}
 
 .card {
   max-width: 900px;

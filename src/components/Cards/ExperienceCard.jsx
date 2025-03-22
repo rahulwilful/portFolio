@@ -129,9 +129,11 @@ const ExperienceCard = ({ children, from, to, organisation, title, details, posi
       <div className={`${s.experience1}  border border-dark glass2 py-5 px-3 px-md-4 rounded-3 d-flex flex-column gap-3`}>
         <div className={`d-flex flex-column `}>
           <h3 className="text-center title winkySans600 ">{title || NA}</h3>
-          <h5 className={`subTitle deliusRegular subText`}>{organisation || NA}</h5>
+          <h5 className={`subTitle deliusRegular subText`}>
+            <i class="bi bi-building"></i> {organisation || NA}
+          </h5>
           <h6 className={`subTitle2  deliusRegular subText2`}>
-            {from || NA} - {to || NA}
+            <i class="bi bi-calendar3"></i> { + from || NA} - {to || NA}
           </h6>
         </div>
         <div style={{ lineHeight: '' }}>
