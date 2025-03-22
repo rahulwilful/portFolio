@@ -83,8 +83,8 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className=" text-center text-light text-lg-start  px-3  ">
-      <div className={` border-top border-secondary border-opacity-50 `}>
+    <footer className=" text-center text-light text-lg-start rounded-0  border-top border-secondary border-opacity-50  px-3 glass1  ">
+      <div className={` `}>
         <div className=" p-4">
           <div className="row">
             <div className="col-lg-6 col-md-12 mb-4 mb-md-0">
