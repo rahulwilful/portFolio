@@ -69,7 +69,7 @@ const NavBar = () => {
       </nav>
       <div className={`w-100  bg-transparent d-lg-none     overflow-hidden shadow-s`} style={{ padding: '2px' }}>
         <button class="btn btn-transparent  p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-          <i class="bi bi-list text-light fs-3"></i>
+          <i class="bi bi-list text-light fs-1"></i>
         </button>
       </div>
 
