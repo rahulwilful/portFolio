@@ -67,7 +67,7 @@ const NavBar = () => {
           </StarBorder>
         </div>
       </nav>
-      <div className={`w-100  bg-transparent    overflow-hidden shadow-s`} style={{ padding: '2px' }}>
+      <div className={`w-100  bg-transparent d-lg-none     overflow-hidden shadow-s`} style={{ padding: '2px' }}>
         <button class="btn btn-transparent  p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
           <i class="bi bi-list text-light fs-3"></i>
         </button>
