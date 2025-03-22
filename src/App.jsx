@@ -8,6 +8,7 @@ import Skills from './pages/Skills';
 import Introduction from './pages/Introduction';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { backgroundImage } from './constants/imagesAndIcons';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function App() {
   const [count, setCount] = useState(0);
