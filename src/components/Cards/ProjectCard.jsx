@@ -170,7 +170,7 @@ const ProjectCard = ({ title, from, to, details, organisation, skills }) => {
                   {skills
                     ? skills.map((skill, index) => (
                         <li className={` mx-1 my-1 fs-6 px-2 py-1 skill ${s.opacity}`} key={index}>
-                          <button type="button" class="btn btn-outline-light  rounded-pill">
+                          <button type="button" class="btn btn-sm  btn-outline-light  rounded-pill">
                             {skill}
                           </button>
                         </li>
