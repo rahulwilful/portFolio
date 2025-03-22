@@ -82,23 +82,23 @@ const NavBar = () => {
         </div>
         <div class="offcanvas-body ">
           <ul className={`me-auto deliusRegular mb-2 text-light mb-lg-0 w-100 d-flex flex-column gap-5 fs-5 rounded-5`} style={{ listStyleType: 'none' }}>
-            <li className={`nav-item`}>
-              <Link data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" to="/" className={`text-decoration-none text-light`}>
+            <li data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" className={`nav-item`}>
+              <Link to="/" className={`text-decoration-none text-light`}>
                 Introduction
               </Link>
             </li>
-            <li className={`nav-item`}>
-              <Link data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" to="/experience" className={`nav-link text-decoration-none active  text-light`} aria-current="page">
+            <li data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" className={`nav-item`}>
+              <Link to="/experience" className={`nav-link text-decoration-none active  text-light`} aria-current="page">
                 Experience
               </Link>
             </li>
-            <li className={`nav-item`}>
-              <Link data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" to="/skills" className={`nav-link text-decoration-none active text-light`} aria-current="page">
+            <li data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" className={`nav-item`}>
+              <Link to="/skills" className={`nav-link text-decoration-none active text-light`} aria-current="page">
                 Skills
               </Link>
             </li>
-            <li className={`nav-item`}>
-              <Link data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" to="/projects" className={`nav-link text-decoration-none active text-light`} aria-current="page">
+            <li data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" className={`nav-item`}>
+              <Link to="/projects" className={`nav-link text-decoration-none active text-light`} aria-current="page">
                 Projects
               </Link>
             </li>
