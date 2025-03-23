@@ -119,7 +119,7 @@ const Introduction = () => {
 
   return (
     <>
-      <Container tempBorder={false}>
+      <Container pt={30} pb={30} tempBorder={false}>
         <div className={`d-flex flex-column-reverse flex-lg-row  gap-4  w-100 h-100 align-items-center justify-content-evenly overflow-hidden`}>
           <SplashCursor Position={'absolute'} />
           {/*  */}
