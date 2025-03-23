@@ -119,9 +119,9 @@ const Introduction = () => {
 
   return (
     <>
+      <SplashCursor Position={'absolute'} />
       <Container pt={30} pb={30} tempBorder={false}>
-        <div className={`d-flex flex-column-reverse flex-lg-row  gap-4  w-100 h-100 align-items-center justify-content-evenly overflow-hidden`}>
-          <SplashCursor Position={'absolute'} />
+        <div className={`d-flex flex-column-reverse flex-lg-row   gap-4  w-100 h-100 align-items-center justify-content-evenly overflow-hidden`}>
           {/*  */}
           <div className={` ${s.intro} introductionContainer py-3 py-md-5 border shadow-s border-dark d-flex flex-column justify-content-center align-items-center px-3  px-md-4`}>
             <h1 className="gemeStonesRegular name">Rahul Patil</h1>

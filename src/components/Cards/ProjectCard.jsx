@@ -115,7 +115,7 @@ const ProjectCard = ({ title, from, to, details, organisation, skills, frontendL
       delay: 2,
       opacity: 1,
       y: 0,
-      duration: 0.9,
+      duration: 0.3,
       stagger: 0.3,
       ease: 'power1.out'
     });

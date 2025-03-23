@@ -1032,7 +1032,7 @@ function SplashCursor({
         ...(Position && { position: Position }),
         top: 0,
         left: 0,
-        zIndex: 50,
+        zIndex: 0,
         pointerEvents: 'none',
         width: '100%',
         height: '100%'

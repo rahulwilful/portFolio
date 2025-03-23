@@ -90,7 +90,7 @@ const Footer = () => {
             <h5 className="text-uppercase winkySans600 detail contactInfo text-center">Contact Information</h5>
             <div className={`d-flex flex-wrap gap-0 text-light gap-md-3 flex-column flex-md-row w-100 justify-content-evenly`}>
               <p className={`deliusRegular detail phone `}>
-                <i class="bi bi-telephone-fill"></i>:{' '}
+                <i class="bi bi-whatsapp"></i>:{' '}
                 <a className={`text-light text-decoration-none`} href="tel:+919767589256">
                   +91 9767589256
                 </a>

@@ -58,6 +58,6 @@ export const projectInformation = [
     skills: ['PHP', 'Arduino Programming', 'HTML5', 'CSS', 'Bootstrap', 'Node-RED', 'MySQL', 'GitHub'],
     details: ['Led a team to automate a water meter with Arduino Uno.', 'Designed a system to record meter readings and send data to a server for billing.', 'Programmed Arduino Uno in C/C++ and integrated other technologies for data management and bill generation.'],
     frontendLink: 'https://github.com/rahulwilful/FinelYearProject',
-    backendLink: ''
+    backendLink: 'https://github.com/rahulwilful/FinelYearProject'
   }
 ];
