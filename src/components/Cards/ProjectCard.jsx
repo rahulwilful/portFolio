@@ -5,10 +5,11 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { animateElements } from '../../constants/constantFunctions/OnScrollAnimate';
+import { Link } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ProjectCard = ({ title, from, to, details, organisation, skills }) => {
+const ProjectCard = ({ title, from, to, details, organisation, skills, frontendLink, backendLink }) => {
   console.log('skills', skills);
 
   const NA = 'NA';
@@ -40,6 +41,8 @@ const ProjectCard = ({ title, from, to, details, organisation, skills }) => {
 
     const subText2 = document.querySelectorAll('.subText2');
 
+    const links = document.querySelectorAll('.links');
+
     // Loop through each card and apply the animation
     headings.forEach((heading, index) => {
       animateHeading(heading);
@@ -51,6 +54,10 @@ const ProjectCard = ({ title, from, to, details, organisation, skills }) => {
 
     subText2.forEach((heading, index) => {
       animateHeading(heading, 1.6);
+    });
+
+    links.forEach((heading, index) => {
+      animateHeading(heading, 3);
     });
   }, []);
 
@@ -130,7 +137,7 @@ const ProjectCard = ({ title, from, to, details, organisation, skills }) => {
             </div>
           </div>
 
-          <div className={` ${s.card} fs-5 deliusRegular d-flex flex-column justify-content-center align-items-center`}>
+          <div className={`${s.card} fs-5 deliusRegular d-flex flex-column justify-content-center align-items-center`}>
             <ol className={` `}>
               {details ? (
                 details.map((detail, index) => (
@@ -144,18 +151,32 @@ const ProjectCard = ({ title, from, to, details, organisation, skills }) => {
               <li className={`detail ${s.opacity}`}>
                 Skills :{' '}
                 <ul className={`d-flex flex-wrap list-unstyled`}>
-                  {skills
-                    ? skills.map((skill, index) => (
-                        <li className={` mx-1 my-1 fs-6 px-2 py-1 skill ${s.opacity}`} key={index}>
-                          <button type="button" class="btn btn-sm   btn-outline-light  rounded-pill">
-                            {skill}
-                          </button>
-                        </li>
-                      ))
-                    : 'No Skills Found'}
+                  {skills ? (
+                    skills.map((skill, index) => (
+                      <li className={` mx-1 my-1 fs-6 px-2 py-1 skill ${s.opacity}`} key={index}>
+                        <button type="button" class="btn btn-sm   btn-outline-light  rounded-pill">
+                          {skill}
+                        </button>
+                      </li>
+                    ))
+                  ) : (
+                    <li className={` mx-1 my-1 fs-6 px-2 py-1 skill ${s.opacity}`}>No Skills Found</li>
+                  )}
                 </ul>
               </li>
             </ol>
+          </div>
+          <div className={`d-flex gap-3  `}>
+            {frontendLink && (
+              <Link to={frontendLink} target="_blank" rel="noopener noreferrer" type="button" class="btn btn-sm links  rounded-pill px-3 btn-light">
+                Frontend <i class="bi bi-link-45deg"></i>
+              </Link>
+            )}
+            {backendLink && (
+              <Link to={backendLink} target="_blank" rel="noopener noreferrer" type="button" class="btn btn-sm links   rounded-pill px-3 btn-light">
+                Backend <i class="bi bi-link-45deg"></i>
+              </Link>
+            )}
           </div>
         </div>
       </div>
