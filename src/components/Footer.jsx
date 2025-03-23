@@ -86,14 +86,32 @@ const Footer = () => {
     <footer className=" text-center text-light text-lg-start rounded-0  border-top border-secondary border-opacity-50  px-3 glass1  ">
       <div className={` `}>
         <div className=" p-4">
-          <div className="row">
-            <div className="col-lg-6 col-md-12 mb-4 mb-md-0">
-              <h5 className="text-uppercase winkySans600 detail contactInfo ">Contact Information</h5>
+          <div className="w-100">
+            <h5 className="text-uppercase winkySans600 detail contactInfo text-center">Contact Information</h5>
+            <div className={`d-flex flex-wrap gap-0 text-light gap-md-3 flex-column flex-md-row w-100 justify-content-evenly`}>
               <p className={`deliusRegular detail phone `}>
-                Phone: <a href="tel:+919767589256">+91 9767589256</a>
+                <i class="bi bi-telephone-fill"></i>:{' '}
+                <a className={`text-light text-decoration-none`} href="tel:+919767589256">
+                  +91 9767589256
+                </a>
               </p>
               <p className={`deliusRegular detail email `}>
-                Email: <a href="mailto:rahulwilful@gmail.com">rahulwilful@gmail.com</a>
+                <i class="bi bi-envelope-at-fill"></i>:{' '}
+                <a className={`text-light text-decoration-none`} href="mailto:rahulwilful@gmail.com">
+                  rahulwilful@gmail.com
+                </a>
+              </p>
+              <p className={`deliusRegular detail email `}>
+                <i class="bi bi-linkedin"></i>:{' '}
+                <a className={`text-light text-decoration-none`} href="https://www.linkedin.com/in/rahul-wilful/" target="_blank" rel="noopener noreferrer">
+                  linkedin.com/in/rahul-wilful
+                </a>
+              </p>
+              <p className={`deliusRegular detail email `}>
+                <i class="bi bi-github"></i>:{' '}
+                <a className={`text-light text-decoration-none`} href="https://github.com/rahulwilful" target="_blank" rel="noopener noreferrer">
+                  https://github.com/rahulwilful
+                </a>
               </p>
             </div>
           </div>
