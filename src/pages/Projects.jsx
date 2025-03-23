@@ -72,7 +72,7 @@ const Projects = () => {
 
   return (
     <>
-      <Container pb={50} tempBorder={false} display={'start'}>
+      <Container pb={50} pt={30} tempBorder={false} display={'start'}>
         <div className={` h-100    d-flex flex-column   align-items-center gap-3  `}>
           <div className={` h-100`}>
             {projectInformation.map((detail, index) => (
