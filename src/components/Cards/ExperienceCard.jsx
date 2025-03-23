@@ -133,7 +133,7 @@ const ExperienceCard = ({ children, from, to, organisation, title, details, posi
             <i class="bi bi-building"></i> {organisation || NA}
           </h5>
           <h6 className={`subTitle2  deliusRegular subText2`}>
-            <i class="bi bi-calendar3"></i> { + from || NA} - {to || NA}
+            <i class="bi bi-calendar3"></i> {from || NA} - {to || NA}
           </h6>
         </div>
         <div style={{ lineHeight: '' }}>
